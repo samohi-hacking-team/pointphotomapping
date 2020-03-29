@@ -59,8 +59,8 @@ const scatterplot = () => new ScatterplotLayer({
     data: sourceData,
     opacity: 0.7,
     filled: true,
-    radiusMinPixels: 30,
-    radiusMaxPixels: 40,
+    radiusMinPixels: 20,
+    radiusMaxPixels: 30,
     getPosition: d => [d.longitude, d.latitude],
     // 
     getFillColor: d => d.n_problems > 0 ? [200, 0, 40, 150] : [255, 140, 0, 100],
@@ -70,11 +70,11 @@ const scatterplot = () => new ScatterplotLayer({
         if (object) {
             const { n_problems, incident_id } = object;
             el.innerHTML = `
-            <h3 class="thetool">Local Problem:</h3><br>
+            <h3 class="thetool">Local Problem:</h3>
             <h4>Description: ${object.notes}</h4>
             <p>Latitude: ${object.latitude}</p>
             <p>Longitude: ${object.longitude}</p>
-            <img src=${object.imag3}>
+            <img src=${object.imag3} class="imgpopup">
             `
             el.style.display = 'block';
             el.style.opacity = 0.9;

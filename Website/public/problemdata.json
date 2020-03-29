@@ -9,17 +9,17 @@
         "imag3": "https://diva.sfsu.edu/bundles/image/1514362.x1000.png"
     },
     {
-        "latitude": 33.8958,
-        "longitude": -118.2201,
+        "latitude": 34.0166,
+        "longitude": -118.4704,
         "date": "5/21/2004",
-        "notes": "baasdf",
+        "notes": "Huge crack on the street, I almost tripped!",
         "n_problems": 1,
         "incident_id": 13,
-        "imag3": "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+        "imag3": "https://previews.123rf.com/images/vit7992/vit79921908/vit7992190800037/129412082-crack-on-concrete-surface-in-the-streets-of-los-angeles.jpg"
     },
     {
-        "latitude": 33.6595,
-        "longitude": -117.9988,
+        "latitude": 34.0272,
+        "longitude": -118.4865,
         "date": "5/22/2004",
         "notes": "dirty wall with a lot of graffiti",
         "n_problems": 1,
@@ -30,9 +30,9 @@
         "latitude": 34.0195,
         "longitude": -118.4912,
         "date": "5/23/2004",
-        "notes": "bruh",
+        "notes": "abandoned, broken trash can",
         "n_problems": 1,
         "incident_id": 15,
-        "imag3": "https://hackernoon.com/hn-images/1*jFyawcsqoYctkTuZg6wQ1A.jpeg"
+        "imag3": "https://townsquare.media/site/29/files/2014/03/Waste-Management-Trash-Can.jpg"
     }
 ]
