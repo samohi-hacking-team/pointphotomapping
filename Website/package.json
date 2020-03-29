@@ -1,0 +1,25 @@
+{
+  "name": "mypointphoto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --output-path ./public",
+    "start": "webpack-dev-server --content-base ./public --output-path ./public --hot"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "dependencies": {
+    "@deck.gl/aggregation-layers": "^8.1.1",
+    "@deck.gl/core": "^8.1.1",
+    "@deck.gl/google-maps": "^8.1.1",
+    "@deck.gl/layers": "^8.1.1"
+  }
+}
