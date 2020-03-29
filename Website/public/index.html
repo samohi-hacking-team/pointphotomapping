@@ -1,13 +1,4 @@
 <head>
-    <script src="main.js"></script>
-
-    <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2PZxr1esmCxsml5MOTQ_J2237h9ZajTY&callback=initMap">
-
-            const sourceData = './problemdata.json';
-        </script>
-
-
 
     <style>
         body {
@@ -47,6 +38,12 @@
             border-color: white;
             border-radius: 5px;
             color: white;
+            padding: 0;
+        }
+
+        #imgpopup {
+            width: 50px;
+            height: auto;
         }
     </style>
 </head>
@@ -56,5 +53,11 @@
     <div id="map" style="position:absolute" ;></div>
 
     <div id="tooltip"></div>
+
+    <script src="main.js"></script>
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2PZxr1esmCxsml5MOTQ_J2237h9ZajTY&callback=initMap">
+
+        </script>
 
 </body>

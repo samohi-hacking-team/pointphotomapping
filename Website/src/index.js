@@ -1,3 +1,12 @@
+import { GoogleMapsOverlay } from '@deck.gl/google-maps';
+import { HexagonLayer } from '@deck.gl/aggregation-layers';
+import { ScatterplotLayer } from '@deck.gl/layers';
+import { HeatmapLayer } from '@deck.gl/aggregation-layers';
+
+// Problem Data will be Niko's automatically updating database
+const sourceData = require('../public/problemdata.json');
+console.log(sourceData[0]);
+
 window.initMap = () => {
 
     const map = new google.maps.Map(document.getElementById('map'), {
@@ -18,28 +27,18 @@ window.initMap = () => {
 
 }
 
-import { GoogleMapsOverlay } from '@deck.gl/google-maps';
-import { HexagonLayer } from '@deck.gl/aggregation-layers';
-import { ScatterplotLayer } from '@deck.gl/layers';
-import { HeatmapLayer } from '@deck.gl/aggregation-layers';
-
-// Problem Data will be Niko's automatically updating database
-const sourceData = './problemdata.json';
-
-
 // Hexs not utilized in application
 const hexagon = () => new HexagonLayer({
     id: 'hex',
     data: sourceData,
     getPosition: d => [d.longitude, d.latitude],
     // Change Elevation depending on amount in certain area
-    getElevationWeight: d => d.n_killed,
-    elevationScale: 2,
+    getElevationWeight: d => d.n_test,
+    elevationScale: 0,
     extruded: true,
-    radius: 1600,
-    opacity: 0.6,
-    coverage: 0.88,
-    lowerPercentile: 50
+    radius: 0,
+    lowerPercentile: 0
+    //test
 
 });
 const heatmap = () => new HeatmapLayer({
@@ -51,6 +50,10 @@ const heatmap = () => new HeatmapLayer({
 
 
 });
+
+function getData(sourceData, imageID) {
+
+}
 const scatterplot = () => new ScatterplotLayer({
     id: 'scatter',
     data: sourceData,
@@ -68,7 +71,10 @@ const scatterplot = () => new ScatterplotLayer({
             const { n_problems, incident_id } = object;
             el.innerHTML = `
             <h3 class="thetool">Local Problem:</h3><br>
-            <img src = sourceData.getString("imag3")>
+            <h4>Description: ${object.notes}</h4>
+            <p>Latitude: ${object.latitude}</p>
+            <p>Longitude: ${object.longitude}</p>
+            <img src=${object.imag3}>
             `
             el.style.display = 'block';
             el.style.opacity = 0.9;
