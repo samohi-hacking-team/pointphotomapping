@@ -1,0 +1,60 @@
+<head>
+    <script src="main.js"></script>
+
+    <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2PZxr1esmCxsml5MOTQ_J2237h9ZajTY&callback=initMap">
+
+            const sourceData = './problemdata.json';
+        </script>
+
+
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #map {
+            width: 90vw;
+            height: 90vh;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+            border-radius: 15px;
+        }
+
+        #tooltip {
+            position: absolute;
+            background: white;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #boxup {
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: center;
+            width: 50px;
+            height: auto;
+
+        }
+
+        #thetool {
+            background-color: #5842ff;
+            border-color: white;
+            border-radius: 5px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="map" style="position:absolute" ;></div>
+
+    <div id="tooltip"></div>
+
+</body>
